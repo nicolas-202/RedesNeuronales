@@ -1,0 +1,97 @@
+{
+  "examples": [
+
+    {"code": "def get_first(arr):\n    return arr[0]", "complexity": "O(1)"},
+    {"code": "def add(a, b):\n    return a + b", "complexity": "O(1)"},
+    {"code": "def check_even(n):\n    return n % 2 == 0", "complexity": "O(1)"},
+    {"code": "def assign_val():\n    x = 42", "complexity": "O(1)"},
+    {"code": "def get_length_3():\n    lst = [1,2,3]\n    return len(lst)", "complexity": "O(1)"},
+    {"code": "def is_empty(s):\n    return s == ''", "complexity": "O(1)"},
+    {"code": "def return_constant():\n    return 123", "complexity": "O(1)"},
+    {"code": "def compare(a, b):\n    return a > b", "complexity": "O(1)"},
+    {"code": "def print_hello():\n    print('Hello')", "complexity": "O(1)"},
+    {"code": "def abs_val(x):\n    return abs(x)", "complexity": "O(1)"},
+
+    {"code": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1", "complexity": "O(log n)"},
+    {"code": "def log_count(n):\n    count = 0\n    while n > 1:\n        n = n // 2\n        count += 1\n    return count", "complexity": "O(log n)"},
+    {"code": "def find_log(n):\n    i = 1\n    steps = 0\n    while i < n:\n        i *= 2\n        steps += 1\n    return steps", "complexity": "O(log n)"},
+    {"code": "def halve_until_one(n):\n    res = 0\n    while n > 1:\n        n //= 2\n        res += 1\n    return res", "complexity": "O(log n)"},
+    {"code": "def check_power_of_two(n):\n    while n > 1:\n        if n % 2 != 0:\n            return False\n        n //= 2\n    return True", "complexity": "O(log n)"},
+    {"code": "def log_loop(n):\n    i = n\n    count = 0\n    while i > 0:\n        i //= 2\n        count += 1\n    return count", "complexity": "O(log n)"},
+    {"code": "def bits_count(n):\n    c = 0\n    while n:\n        n >>= 1\n        c += 1\n    return c", "complexity": "O(log n)"},
+    {"code": "def power_down(n):\n    while n > 0:\n        n //= 3\n    return n", "complexity": "O(log n)"},
+    {"code": "def count_div2(n):\n    cnt = 0\n    while n > 2:\n        n //= 2\n        cnt += 1\n    return cnt", "complexity": "O(log n)"},
+    {"code": "def log_search(n):\n    low, high = 1, n\n    while low < high:\n        mid = (low + high) // 2\n        if mid*mid < n:\n            low = mid + 1\n        else:\n            high = mid\n    return low", "complexity": "O(log n)"},
+
+    {"code": "def sum_list(lst):\n    total = 0\n    for x in lst:\n        total += x\n    return total", "complexity": "O(n)"},
+    {"code": "def find_max(arr):\n    m = arr[0]\n    for x in arr:\n        if x > m:\n            m = x\n    return m", "complexity": "O(n)"},
+    {"code": "def linear_search(arr, target):\n    for x in arr:\n        if x == target:\n            return True\n    return False", "complexity": "O(n)"},
+    {"code": "def print_all(a):\n    for x in a:\n        print(x)", "complexity": "O(n)"},
+    {"code": "def copy_list(a):\n    b = []\n    for x in a:\n        b.append(x)\n    return b", "complexity": "O(n)"},
+    {"code": "def filter_even(a):\n    evens = []\n    for x in a:\n        if x % 2 == 0:\n            evens.append(x)\n    return evens", "complexity": "O(n)"},
+    {"code": "def count_zeros(lst):\n    cnt = 0\n    for x in lst:\n        if x == 0:\n            cnt += 1\n    return cnt", "complexity": "O(n)"},
+    {"code": "def increment_all(arr):\n    for i in range(len(arr)):\n        arr[i] += 1", "complexity": "O(n)"},
+    {"code": "def first_negative(a):\n    for x in a:\n        if x < 0:\n            return x\n    return None", "complexity": "O(n)"},
+    {"code": "def list_to_str(lst):\n    s = ''\n    for x in lst:\n        s += str(x)\n    return s", "complexity": "O(n)"},
+
+ 
+    {"code": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr)//2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\ndef merge(a, b):\n    result = []\n    while a and b:\n        if a[0] < b[0]: result.append(a.pop(0))\n        else: result.append(b.pop(0))\n    result += a + b\n    return result", "complexity": "O(n log n)"},
+    {"code": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[0]\n    less = [x for x in arr[1:] if x < pivot]\n    greater = [x for x in arr[1:] if x >= pivot]\n    return quick_sort(less) + [pivot] + quick_sort(greater)", "complexity": "O(n log n)"},
+    {"code": "def tim_sort(arr):\n    arr.sort()\n    return arr", "complexity": "O(n log n)"},
+    {"code": "def sort_and_print(a):\n    a.sort()\n    for x in a:\n        print(x)", "complexity": "O(n log n)"},
+    {"code": "def sort_unique(lst):\n    return sorted(set(lst))", "complexity": "O(n log n)"},
+    {"code": "def heapsort(arr):\n    import heapq\n    h = []\n    for v in arr:\n        heapq.heappush(h, v)\n    return [heapq.heappop(h) for _ in range(len(arr))]", "complexity": "O(n log n)"},
+    {"code": "def sort_reverse(a):\n    return sorted(a, reverse=True)", "complexity": "O(n log n)"},
+    {"code": "def index_sort(a):\n    return sorted((x,i) for i,x in enumerate(a))", "complexity": "O(n log n)"},
+    {"code": "def sort_by_length(lst):\n    return sorted(lst, key=len)", "complexity": "O(n log n)"},
+    {"code": "def sort_with_lambda(a):\n    return sorted(a, key=lambda x: x%10)", "complexity": "O(n log n)"},
+
+
+    {"code": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n-i-1):\n            if arr[j]>arr[j+1]:\n                arr[j], arr[j+1] = arr[j+1], arr[j]\n    return arr", "complexity": "O(n^2)"},
+    {"code": "def selection_sort(arr):\n    for i in range(len(arr)):\n        min_idx = i\n        for j in range(i+1, len(arr)):\n            if arr[j] < arr[min_idx]:\n                min_idx = j\n        arr[i], arr[min_idx] = arr[min_idx], arr[i]\n    return arr", "complexity": "O(n^2)"},
+    {"code": "def insertion_sort(arr):\n    for i in range(1, len(arr)):\n        key = arr[i]\n        j = i-1\n        while j >=0 and key < arr[j]:\n            arr[j+1] = arr[j]\n            j -= 1\n        arr[j+1] = key\n    return arr", "complexity": "O(n^2)"},
+    {"code": "def all_pairs(a):\n    pairs = []\n    for i in a:\n        for j in a:\n            pairs.append((i,j))\n    return pairs", "complexity": "O(n^2)"},
+    {"code": "def matrix_mult(a, b):\n    n = len(a)\n    res = [[0]*n for _ in range(n)]\n    for i in range(n):\n        for j in range(n):\n            for k in range(n):\n                res[i][j] += a[i][k]*b[k][j]\n    return res", "complexity": "O(n^2)"},
+    {"code": "def unique_pairs(lst):\n    pairs = []\n    for i in range(len(lst)):\n        for j in range(i+1, len(lst)):\n            pairs.append((lst[i], lst[j]))\n    return pairs", "complexity": "O(n^2)"},
+    {"code": "def duplicate_count(arr):\n    cnt = 0\n    for i in range(len(arr)):\n        for j in range(len(arr)):\n            if i != j and arr[i] == arr[j]:\n                cnt += 1\n    return cnt//2", "complexity": "O(n^2)"},
+    {"code": "def is_substring(a, b):\n    for i in range(len(a)-len(b)+1):\n        for j in range(len(b)):\n            if a[i+j] != b[j]:\n                break\n        else:\n            return True\n    return False", "complexity": "O(n^2)"},
+    {"code": "def find_duplicates(a):\n    dups = []\n    for i in range(len(a)):\n        for j in range(i+1, len(a)):\n            if a[i] == a[j]:\n                dups.append(a[i])\n    return dups", "complexity": "O(n^2)"},
+    {"code": "def nested_sum(a):\n    s = 0\n    for i in a:\n        for j in a:\n            s += i + j\n    return s", "complexity": "O(n^2)"},
+
+
+    {"code": "def triple_sum(arr):\n    total = 0\n    for i in arr:\n        for j in arr:\n            for k in arr:\n                total += i + j + k\n    return total", "complexity": "O(n^3)"},
+    {"code": "def count_triplets(arr):\n    count = 0\n    for i in range(len(arr)):\n        for j in range(len(arr)):\n            for k in range(len(arr)):\n                if arr[i] + arr[j] + arr[k] == 0:\n                    count += 1\n    return count", "complexity": "O(n^3)"},
+    {"code": "def all_triplets_unique(lst):\n    for i in range(len(lst)):\n        for j in range(len(lst)):\n            for k in range(len(lst)):\n                if i < j < k:\n                    print(lst[i], lst[j], lst[k])", "complexity": "O(n^3)"},
+    {"code": "def max_triplet(arr):\n    mx = float('-inf')\n    for i in range(len(arr)):\n        for j in range(i+1, len(arr)):\n            for k in range(j+1, len(arr)):\n                mx = max(mx, arr[i]+arr[j]+arr[k])\n    return mx", "complexity": "O(n^3)"},
+    {"code": "def matrix_cube_sum(mat):\n    s = 0\n    size = len(mat)\n    for i in range(size):\n        for j in range(size):\n            for k in range(size):\n                s += mat[i][j] * mat[j][k] * mat[k][i]\n    return s", "complexity": "O(n^3)"},
+    {"code": "def triple_nested_if(n):\n    for i in range(n):\n        for j in range(n):\n            if i != j:\n                for k in range(n):\n                    print(i, j, k)", "complexity": "O(n^3)"},
+    {"code": "def find_sum_triplets(a):\n    for i in range(len(a)):\n        for j in range(len(a)):\n            for k in range(len(a)):\n                x = a[i] + a[j] + a[k]", "complexity": "O(n^3)"},
+    {"code": "def triple_for_func(n):\n    def f(x): return x+1\n    for i in range(n):\n        for j in range(n):\n            for k in range(n):\n                f(i+j+k)", "complexity": "O(n^3)"},
+    {"code": "def three_dim_matrix(n):\n    cube = [[[0 for _ in range(n)] for _ in range(n)] for _ in range(n)]\n    for i in range(n):\n        for j in range(n):\n            for k in range(n):\n                cube[i][j][k] = i + j + k", "complexity": "O(n^3)"},
+    {"code": "def triple_index_sum(a):\n    for i in range(len(a)):\n        for j in range(len(a)):\n            for k in range(len(a)):\n                a[i] = j + k", "complexity": "O(n^3)"},
+
+
+    {"code": "def power_set(arr):\n    if not arr:\n        return [[]]\n    first = arr[0]\n    rest = power_set(arr[1:])\n    return rest + [[first] + x for x in rest]", "complexity": "O(2^n)"},
+    {"code": "def fib(n):\n    if n <= 1:\n        return n\n    return fib(n-1) + fib(n-2)", "complexity": "O(2^n)"},
+    {"code": "def subset_sum(arr, target):\n    if target == 0:\n        return True\n    if not arr:\n        return False\n    return subset_sum(arr[1:], target) or subset_sum(arr[1:], target-arr[0])", "complexity": "O(2^n)"},
+    {"code": "def count_ways(n):\n    if n == 0:\n        return 1\n    if n < 0:\n        return 0\n    return count_ways(n-1) + count_ways(n-2)", "complexity": "O(2^n)"},
+    {"code": "def generate_strings(s):\n    if not s:\n        return ['']\n    rest = generate_strings(s[1:])\n    return rest + [s[0]+x for x in rest]", "complexity": "O(2^n)"},
+    {"code": "def all_subsets(arr):\n    res = [[]]\n    for x in arr:\n        res += [curr + [x] for curr in res]\n    return res", "complexity": "O(2^n)"},
+    {"code": "def all_binary(n):\n    if n == 0:\n        return ['']\n    return ['0'+x for x in all_binary(n-1)] + ['1'+x for x in all_binary(n-1)]", "complexity": "O(2^n)"},
+    {"code": "def ways_to_climb(n):\n    if n <= 1:\n        return 1\n    return ways_to_climb(n-1) + ways_to_climb(n-2)", "complexity": "O(2^n)"},
+    {"code": "def sum_subsets(arr):\n    if not arr:\n        return [0]\n    rest = sum_subsets(arr[1:])\n    return rest + [arr[0] + x for x in rest]", "complexity": "O(2^n)"},
+    {"code": "def all_paths(n):\n    if n == 0:\n        return 1\n    return all_paths(n-1) + all_paths(n-1)", "complexity": "O(2^n)"},
+
+ 
+    {"code": "def permute(arr):\n    if len(arr) <= 1:\n        return [arr]\n    result = []\n    for i in range(len(arr)):\n        rest = arr[:i] + arr[i+1:]\n        for p in permute(rest):\n            result.append([arr[i]] + p)\n    return result", "complexity": "O(n!)"},
+    {"code": "import itertools\ndef all_perms(lst):\n    return list(itertools.permutations(lst))", "complexity": "O(n!)"},
+    {"code": "def seating(people):\n    if not people:\n        return [[]]\n    result = []\n    for i, p in enumerate(people):\n        for rest in seating(people[:i]+people[i+1:]):\n            result.append([p]+rest)\n    return result", "complexity": "O(n!)"},
+    {"code": "def string_perms(s):\n    if len(s) == 0:\n        return ['']\n    perms = []\n    for i in range(len(s)):\n        for p in string_perms(s[:i] + s[i+1:]):\n            perms.append(s[i] + p)\n    return perms", "complexity": "O(n!)"},
+    {"code": "def permute_unique(nums):\n    if len(nums) == 0:\n        return [[]]\n    perms = []\n    used = set()\n    for i in range(len(nums)):\n        if nums[i] in used:\n            continue\n        used.add(nums[i])\n        for p in permute_unique(nums[:i]+nums[i+1:]):\n            perms.append([nums[i]]+p)\n    return perms", "complexity": "O(n!)"},
+    {"code": "def fact_perm(a, path=[]):\n    if len(a) == 0:\n        print(path)\n    else:\n        for i in range(len(a)):\n            fact_perm(a[:i]+a[i+1:], path+[a[i]])", "complexity": "O(n!)"},
+    {"code": "def all_anagrams(word):\n    if len(word) <= 1:\n        return [word]\n    anags = []\n    for i, c in enumerate(word):\n        for a in all_anagrams(word[:i]+word[i+1:]):\n            anags.append(c+a)\n    return anags", "complexity": "O(n!)"},
+    {"code": "def permute_numbers(nums):\n    if not nums:\n        return [[]]\n    output = []\n    for i in range(len(nums)):\n        for p in permute_numbers(nums[:i]+nums[i+1:]):\n            output.append([nums[i]]+p)\n    return output", "complexity": "O(n!)"},
+    {"code": "def permute_with_flag(arr, used=None, path=[]):\n    if used is None:\n        used = [False]*len(arr)\n    if len(path) == len(arr):\n        print(path)\n        return\n    for i in range(len(arr)):\n        if not used[i]:\n            used[i] = True\n            permute_with_flag(arr, used, path+[arr[i]])\n            used[i] = False", "complexity": "O(n!)"},
+    {"code": "def generate_all_permutations(lst):\n    if not lst:\n        return [[]]\n    res = []\n    for i in range(len(lst)):\n        for p in generate_all_permutations(lst[:i]+lst[i+1:]):\n            res.append([lst[i]]+p)\n    return res", "complexity": "O(n!)"}
+  ]
+}
